@@ -32,21 +32,21 @@ const EditContact = () => {
             <h1 className="m-auto">Edit a Contact</h1>
             <div>
                 <label>Full Name</label>
-                <input type="text" className="form-control" name="name" onChange={handleChange} />
+                <input type="text" className="form-control" name="name" placeholder="Ana Plata" onChange={handleChange} />
             </div>
             <div>
                 <label htmlFor="">Phone</label>
-                <input type="text" className="form-control" name="number" onChange={handleChange} />
+                <input type="text" className="form-control" name="number" placeholder="0412-XXXXXXX" onChange={handleChange} />
             </div>
             <div>
                 <label> Email </label>
-                <input type="text" className="form-control" name="email" onChange={handleChange} />
+                <input type="email" className="form-control" name="email" placeholder="name@example.com" onChange={handleChange} />
             </div>
             <div>
                 <label>Address</label>
-                <input type="text" className="form-control" name="address" onChange={handleChange} />
+                <input type="text" className="form-control" name="address" placeholder="La Guaira, Venezuela" onChange={handleChange} />
             </div>
-            <button className="btn btn-primary" onClick={addNewContact}>Modificar Contacto</button>
+            <button className="btn btn-primary" onClick={addNewContact}>Modify Contact</button>
         </div>
 
     );
