@@ -30,7 +30,7 @@ const Modal = ({ index }) => {
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => handleDelete(index)} >Yes, delete!</button>
-              <button type="button" className="btn btn-primary">Oh no!</button>
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Go Back</button>
             </div>
           </div>
         </div>
