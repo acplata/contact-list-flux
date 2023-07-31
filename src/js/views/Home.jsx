@@ -2,20 +2,14 @@ import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext"
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from "react-icons/fa";
-import { FaPen } from "react-icons/fa";
-import { FaPeriscope } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
+import { FaTrashAlt, FaPen, FaPeriscope, FaEnvelope, FaPhone } from "react-icons/fa";
+import Modal from "../component/Modal.jsx";
 
 export const Home = () => {
 
 	const { actions, store } = useContext(Context);
 	actions.saluda();
 
-	const handleDelete = (index) => {
-		actions.deleteContact(index);
-	};
 	return (
 		<div className="text-center container">
 
@@ -33,14 +27,11 @@ export const Home = () => {
 								<div className="card-body"> <FaEnvelope /> {contacto.email}</div>
 							</div>
 							<div className="buttons col-4">
-								<button className="btn btn-danger-outline" onClick={() => handleDelete(index)} > <FaTrashAlt />  </button>
+								<Modal index={index} />
 								<Link to={`/edit/${index}`}> <FaPen />  </Link>
 							</div>
 						</div>
 					</div>
-
-
-
 				);
 			})}
 		</div >
