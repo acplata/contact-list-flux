@@ -4,5 +4,11 @@ img {
 }
 
 .card {
+    display:flex;
+    justify-content: space-between;
     text-align: left;
+}
+
+.buttons {
+    text-align: right;
 }

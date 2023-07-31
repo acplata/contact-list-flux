@@ -32,7 +32,7 @@ export const Home = () => {
 								<div className="card-body"> <FaPhone /> {contacto.number}</div>
 								<div className="card-body"> <FaEnvelope /> {contacto.email}</div>
 							</div>
-							<div className="col-4">
+							<div className="buttons col-4">
 								<button className="btn btn-danger-outline" onClick={() => handleDelete(index)} > <FaTrashAlt />  </button>
 								<Link to={`/edit/${index}`}> <FaPen />  </Link>
 							</div>
