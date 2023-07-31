@@ -2,7 +2,11 @@ import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext"
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
-
+import { FaTrashAlt } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
+import { FaPeriscope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 
 export const Home = () => {
 
@@ -24,13 +28,13 @@ export const Home = () => {
 							</div>
 							<div className="col-4 m-auto">
 								<h3>{contacto.name}</h3>
-								<div className="card-body">{contacto.address}</div>
-								<div className="card-body">{contacto.number}</div>
-								<div className="card-body">{contacto.email}</div>
+								<div className="card-body"> <FaPeriscope /> {contacto.address}</div>
+								<div className="card-body"> <FaPhone /> {contacto.number}</div>
+								<div className="card-body"> <FaEnvelope /> {contacto.email}</div>
 							</div>
 							<div className="col-4">
-								<button className="btn btn-danger-outline" onClick={() => handleDelete(index)} > Delete </button>
-								<Link to={`/edit/${index}`}> Edit </Link>
+								<button className="btn btn-danger-outline" onClick={() => handleDelete(index)} > <FaTrashAlt />  </button>
+								<Link to={`/edit/${index}`}> <FaPen />  </Link>
 							</div>
 						</div>
 					</div>
